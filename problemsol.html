@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        padding-left: 20px;
+        border: 3px solid black;
+      }
+      h1 {
+        text-decoration: underline;
+      }
+      pre {
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JAVASCRIPT HANDSON 6</h1>
+
+    <h3>1.Find the Smaller Angle</h3>
+    <pre>
+var Minimal_Angle = (h, m) => 
+        {
+             // calculate the hour hand angle
+          let hourAngle = (360 / 12) * (h + (m/ 60));
+          // calculate the minute hand angle
+          let minuteAngle = (360 / 60) * m;
+          // calculate the angle between the hands
+          let angle = Math.abs(hourAngle - minuteAngle);
+          // return the shorter angle
+          return Math.min(angle, 360 - angle);   
+        };</pre
+    >
+
+    <h3>2.Check whether the year is Leap year or not.</h3>
+    <pre>
+var Check_Leap = (year) => 
+            {
+             if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)
+             {
+               return "Leap Year ";
+             }
+              else{
+                 return "Non Leap Year "
+              }
+            
+            };</pre
+    >
+
+    <h3>3.Perfect Number Check</h3>
+    <pre>
+var Perfect_Check = (N) => 
+                {
+                     let sum = 1;
+                    for (let i = 1; i < N; i++) {
+                        if (N % i === 0) {
+                            sum += i;
+                        }
+                    }
+                if(sum === N) {
+                  return "YES"
+                }
+                else
+                {
+                  return "NO"
+                }
+                };</pre
+    >
+
+    <h3>4.Reverse a Number.</h3>
+    <pre>
+var Reverse_Number = (N) => 
+                    {
+                     
+                    let reversedNum = 0;
+                    while (N> 0) {
+                        reversedNum = reversedNum * 10 + (N % 10);
+                        N = Math.floor(N / 10);
+                    }
+                    return reversedNum;
+                      
+                    
+                    };</pre
+    >
+
+    <h3>5.Substring Check.</h3>
+    <pre>
+var Substring_Check = (S1, S2) => 
+                        {
+                          if (S1.includes(S2)) {
+                             return ("YES")
+                          }
+                           
+                        else{
+                          return ("NO")
+                        }
+                             
+                        };</pre
+    >
+  </body>
+</html>
