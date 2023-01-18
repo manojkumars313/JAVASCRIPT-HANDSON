@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        padding-left: 20px;
+        border: 3px solid black;
+      }
+      h1 {
+        text-decoration: underline;
+      }
+      pre {
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JAVASCRIPT HANDSON 1</h1>
+
+    <h3>1.Create one function with zero parameter having a console statement</h3>
+    <pre>function duck(){
+        console.log("hello")
+    }
+    duck();//output:-undefined</pre>
+
+
+    <h3>2.Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</h3>
+    <pre>function sum(a, b) {
+        console.log(a + b);
+      }
+      sum(3, 4);
+    //output 7</pre>
+
+    <h3>3)</h3>
+    <pre>var x = 21;
+        function girl(){
+            console.log(x);
+            var x = 20;
+        };
+        girl ();
+        //output undefined</pre>
+
+
+        <h3>4)</h3>
+        <pre>var x = 21;
+            console.log(x);
+            function girl() {
+              console.log(x);
+              var x = 20;
+            }
+            girl();
+        //21
+    undefined</pre>
+
+    <h3>5)</h3>
+    <pre>var x = 21;
+        a();
+        b();
+        
+        function a() {
+          x = 20;
+          console.log(x);
+        }
+        function b() {
+          x = 40;
+          console.log(x);
+        }
+    output
+a=20
+b=40</pre>
+
+<h3>6)</h3>
+<pre>function factorialize(num) {
+    var result = num;
+  
+    while (num > 1) {
+      num--;
+      result = result * num;
+    }
+    console.log(result);
+  }
+  factorialize(5);
+output 120</pre>
+
+<h3>7)</h3>
+<pre>function sum(a, b) {
+    console.log(a + b);
+  }
+  sum(3, 4);
+output 7</pre>
+    </pre>
+  </body>
+</html>
