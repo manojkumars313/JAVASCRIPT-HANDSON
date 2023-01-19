@@ -17,7 +17,6 @@ function generateRandomInteger(max) {
 
 function maincheck() {
   let inputnumber = document.querySelector("#guessid").value;
-  //    let changvalue=document.querySelector('.score').textContent
 
   if (initialscore !== 0) {
     if (inputnumber > randomnumber) {
