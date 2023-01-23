@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        padding-left: 20px;
+        border: 3px solid black;
+      }
+      h1 {
+        text-decoration: underline;
+      }
+      pre {
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JAVASCRIPT HANDSON 10</h1>
+
+    <h3>1)</h3>
+    <pre>
+function counter() {
+        var counter = 0;
+      
+        function IncreaseCounter() {
+          return (counter += 1);
+        }
+      
+        return IncreaseCounter;
+      }
+      
+      var counter = counter();
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+    
+    output: 1 2 3 4</pre
+    >
+
+    <h3>2)</h3>
+
+    <pre>
+let count = 0;
+        (function () {
+          if (count === 0) {
+            let count = 1;
+            console.log(count); // What is logged?
+          }
+          console.log(count); // What is logged?
+        })();
+    
+    output: 1 0</pre
+    >
+
+    <h3>3)</h3>
+
+    <pre>
+for (var i = 0; i < 3; i++) {
+        setTimeout(function log() {
+          console.log(i); // What is logged?
+        }, 1000);
+      }
+    output: 3 3 3 </pre
+    >
+
+    <h3>4)</h3>
+
+    <pre>
+function outerFunc(length) {
+        function innerFunc(breadth) {
+          console.log(length * breadth);
+        }
+        innerFunc(20);
+      }
+      outerFunc(10);
+    
+    output: 200</pre
+    >
+
+    <h3>5)</h3>
+    <pre>
+function outer() {
+        let counter = 0;
+        function inner() {
+          counter++;
+          return counter;
+        }
+        return inner;
+      }
+      
+      let myFunction = outer();
+      console.log(myFunction()); // Output: 1
+      console.log(myFunction()); // Output: 2
+      console.log(myFunction()); // Output: 3</pre
+    >
+
+    <h3>6)</h3>
+
+    <pre>
+var a = 12;
+        (function () {
+          console.log(a);
+        })();
+    
+    output: 12</pre
+    >
+
+    <h3>7)</h3>
+
+    <pre>
+var a = 10;
+        var x = (function () {
+          var a = 12;
+          return function () {
+            console.log(a);
+          };
+        })();
+        x();
+    
+    output: 12</pre
+    >
+
+    <h3>8)</h3>
+
+    <pre>
+var globalVar = "xyz";
+
+        (function outerFunc(outerArg) {
+          var outerVar = "a";
+        
+          (function innerFunc(innerArg) {
+            var innerVar = "b";
+        
+            console.log(
+              "outerArg = " +
+                outerArg +
+                "\n" +
+                "innerArg = " +
+                innerArg +
+                "\n" +
+                "outerVar = " +
+                outerVar +
+                "\n" +
+                "innerVar = " +
+                innerVar +
+                "\n" +
+                "globalVar = " +
+                globalVar
+            );
+          })(456);
+        })(123);
+    
+    output: outerArg = 123
+    innerArg = 456
+    outerVar = a
+    innerVar = b
+    globalVar = xyz</pre
+    >
+  </body>
+</html>
