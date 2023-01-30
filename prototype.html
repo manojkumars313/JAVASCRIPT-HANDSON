@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        padding-left: 20px;
+        border: 3px solid black;
+      }
+      h1 {
+        text-decoration: underline;
+      }
+      pre {
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JAVASCRIPT HANDSON 11</h1>
+
+    <h3>
+      1)Create 2 objects - parent and child. Attach methods to parent and use
+      those methods in child object using parents prototype
+    </h3>
+    <pre>
+const parent = {
+        detail() {
+          console.log(
+            `My name is ${this.name} and i am from ${this.location} and my age is ${this.age}`
+          );
+        },
+      };
+      const firstChild = Object.create(parent);
+      firstChild.name = "EA19";
+      firstChild.location = "Bangalore";
+      firstChild.age = "23";
+      
+      const firstSecond = Object.create(parent);
+      firstSecond.name = "Manoj";
+      firstSecond.location = "KA";
+      firstSecond.age = "23";
+      
+      firstChild.detail();
+      firstSecond.detail();
+    
+    output:
+    My name is EA19 and i am from Bangalore and my age is 23
+    My name is Manoj and i am from KA and my age is 23</pre
+    >
+  </body>
+</html>
