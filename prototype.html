@@ -51,5 +51,58 @@ const parent = {
     My name is EA19 and i am from Bangalore and my age is 23
     My name is Manoj and i am from KA and my age is 23</pre
     >
+
+    <h3>2)Write code to explain prototype chaining</h3>
+    <pre>
+let baseObject = {
+        name: "base object",
+        sayName: function () {
+          console.log(this.name);
+        },
+      };
+      
+      let myObject = Object.create(baseObject);
+      myObject.name = "Manoj";
+      myObject.sayName(); 
+    
+    output:Manoj</pre
+    >
+
+    <h3>
+      3)Add a method to calculate sum of all elements in Array in array's
+      protype, use that method to calculate sum for multiple arrays
+    </h3>
+    <pre>
+      const calcSum = new Array(1, 2, 3, 4, 5);
+calcSum.__proto__.sum = function (givenArray) {
+  let count = 0;
+  for (let i = 0; i < calcSum.length; i++) {
+    count += calcSum[i];
+  }
+
+  return count;
+};
+
+let result = calcSum.sum(calcSum);
+console.log(result);
+
+output:15
+    </pre>
+
+    <h3>
+      4)Write a JavaScript function to retrieve all the names of object's own
+      and inherited properties.
+    </h3>
+
+    <pre>
+function DisplayData(PassYear, age, College) {
+      this.PassYear = PassYear;
+    }
+    
+    DisplayData.prototype.name = "EA19";
+    const data = new DisplayData(2021, 23, "Prepbytes");
+    console.log(data);
+    console.log(data.name, data.PassYear); // Output:</pre
+    >
   </body>
 </html>
